@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Track humanity's boldest predictions about the future and see how close we are to making them real.">
+<meta property="og:title" content="The Future Is Now — Tech Prediction Tracker">
+<meta property="og:description" content="From sci-fi imagination to technological reality.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<title>未来已来 — The Future Is Now</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="bg-stars"></div>
+
+<!-- Language Switch -->
+<div class="lang-switch">
+  <button class="lang-btn active" onclick="setLang('zh')">中文</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <h1 class="hero-title" data-i18n="heroTitle"></h1>
+  <p class="hero-subtitle" data-i18n="heroSubtitle"></p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-number" id="stat1">0</div>
+      <div class="hero-stat-label" data-i18n="statTracked"></div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-number" id="stat2">0</div>
+      <div class="hero-stat-label" data-i18n="statRealized"></div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-number" id="stat3">0%</div>
+      <div class="hero-stat-label" data-i18n="statAvgProgress"></div>
+    </div>
+  </div>
+  <div class="scroll-indicator" onclick="document.getElementById('navFilter').scrollIntoView({behavior:'smooth'})">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+  </div>
+</section>
+
+<!-- Filter Nav -->
+<nav class="nav-filter" id="navFilter"></nav>
+
+<!-- Main Cards -->
+<main class="container">
+  <div class="section-header">
+    <div class="section-tag tag-blue" data-i18n="sectionTag"></div>
+    <h2 class="section-title" data-i18n="sectionTitle"></h2>
+    <p class="section-desc" data-i18n="sectionDesc"></p>
+  </div>
+  <div class="legend" id="legendBar"></div>
+  <div class="cards-grid" id="cardsGrid"></div>
+</main>
+
+<!-- Timeline -->
+<section class="timeline-section">
+  <div class="section-header">
+    <div class="section-tag tag-purple" data-i18n="tlTag"></div>
+    <h2 class="section-title" data-i18n="tlTitle"></h2>
+    <p class="section-desc" data-i18n="tlDesc"></p>
+  </div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Update Bar -->
+<div class="update-bar" id="updateBar">
+  <div class="update-dot"></div>
+  <span data-i18n="updateLabel"></span>
+  <span id="lastUpdateTime"></span>
+  <span class="update-sep">·</span>
+  <a class="update-link" id="refreshBtn" onclick="manualRefreshNews()" data-i18n="updateNow"></a>
+  <span class="update-sep">·</span>
+  <a class="update-link" href="https://github.com" target="_blank" rel="noopener">GitHub ⭐</a>
+</div>
+
+<footer>
+  <p data-i18n="footerSource"></p>
+  <p style="margin-top:6px" data-i18n="footerCopy"></p>
+  <p style="margin-top:8px;font-size:.75rem;color:var(--text-muted)">
+    Open Source · MIT License · <a href="https://github.com" target="_blank" style="color:var(--accent-cyan)">Contribute on GitHub</a>
+  </p>
+</footer>
+
+<!-- Scripts (modular) -->
+<script src="assets/i18n.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/news.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
