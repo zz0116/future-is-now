@@ -4,6 +4,8 @@
 >
 > 追踪人类对未来世界的大胆预测，看看我们距离实现它们还有多远。
 
+**🌐 [Live Demo](https://zz0116.github.io/future-is-now/)**
+
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-brightgreen)
 ![No Backend](https://img.shields.io/badge/backend-none-orange)
